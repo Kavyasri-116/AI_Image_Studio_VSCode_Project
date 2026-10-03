@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Image Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">✦ AI Image Studio</div>
+    <span class="badge">HTML • CSS • JavaScript</span>
+  </header>
+
+  <main class="app">
+    <section class="hero">
+      <p class="eyebrow">CREATIVE AI PROJECT</p>
+      <h1>Turn your ideas into <span>visuals.</span></h1>
+      <p class="subtitle">Enter a prompt and create a beautiful AI-style image preview directly in your browser.</p>
+    </section>
+
+    <section class="workspace">
+      <div class="controls card">
+        <label for="prompt">Describe your image</label>
+        <textarea id="prompt" placeholder="Example: A futuristic city at sunset with flying cars, cinematic lighting..."></textarea>
+
+        <div class="row">
+          <div>
+            <label for="style">Style</label>
+            <select id="style">
+              <option>Digital Art</option>
+              <option>Realistic</option>
+              <option>Anime</option>
+              <option>Watercolor</option>
+              <option>Cyberpunk</option>
+            </select>
+          </div>
+          <div>
+            <label for="ratio">Aspect Ratio</label>
+            <select id="ratio">
+              <option value="square">1 : 1</option>
+              <option value="wide">16 : 9</option>
+              <option value="portrait">4 : 5</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="generateBtn" class="generate">✦ Generate Image</button>
+        <p class="hint">Demo mode: the browser creates a stylized SVG image from your prompt. A real AI API can be connected later.</p>
+      </div>
+
+      <div class="preview card">
+        <div class="preview-head">
+          <h2>Preview</h2>
+          <button id="downloadBtn" class="download" disabled>Download</button>
+        </div>
+        <div id="canvasWrap" class="canvas-wrap square">
+          <div id="emptyState">
+            <div class="sparkle">✦</div>
+            <h3>Your creation will appear here</h3>
+            <p>Write a prompt and click Generate Image.</p>
+          </div>
+          <img id="resultImage" alt="Generated AI-style image">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>AI Image Studio • Student Web Development Project</footer>
+  <script src="script.js"></script>
+</body>
+</html>
